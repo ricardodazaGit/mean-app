@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/ricardodazaGit/mean-app/issues"
   },
-  "homepage": "https://github.com/ricardodazaGit/mean-app#readme"
+  "homepage": "https://github.com/ricardodazaGit/mean-app#readme",
+  "dependencies": {
+    "cors": "^2.8.4",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "mongojs": "^2.5.0"
+  }
 }
