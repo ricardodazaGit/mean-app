@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 
 //settings
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 3000);
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'ejs');
 
