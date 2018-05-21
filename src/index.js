@@ -1,11 +1,15 @@
 const cors = require('cors');
 const express = require('express');
 const app = express();
+const morgan = require('morgan');
+
+Object.assign=require('object-assign')
 
 //settings
 app.set('port', process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 3000);
 app.engine('html', require('ejs').renderFile);
-app.set('view engine', 'ejs');
+app.use(morgan('combined'))
+//app.set('view engine', 'ejs');
 
 //middlewares
 app.use(cors());
