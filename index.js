@@ -1,4 +1,4 @@
-const cors = require('cors');
+//const cors = require('cors');
 const express = require('express');
 const app = express();
 const morgan = require('morgan');
@@ -7,16 +7,20 @@ Object.assign=require('object-assign')
 
 
 //settings
-var port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080,
-    ip   = process.env.IP   || process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0';
+
 //app.set('port', port);
 app.engine('html', require('ejs').renderFile);
 app.use(morgan('combined'))
 //app.set('view engine', 'ejs');
 
+var port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080,
+    ip   = process.env.IP   || process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0',
+    mongoURL = process.env.OPENSHIFT_MONGODB_DB_URL || process.env.MONGO_URL,
+    mongoURLLabel = "";
+
 //middlewares
-app.use(cors());
-app.use(express.json());
+//app.use(cors());
+//app.use(express.json());
 
 //routes
 //app.use(require('./routes/index'));
