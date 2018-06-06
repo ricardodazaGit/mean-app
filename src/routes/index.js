@@ -1,7 +1,7 @@
 const router = require('express').Router();
 
 router.get('/', (req, res, next) => {
-    res.render('index.html');
+    res.render('Mean-rixi-app');
 });
 
 module.exports = router;
