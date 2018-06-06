@@ -16,7 +16,10 @@ app.use(cors());
 app.use(express.json());
 
 //routes
-app.use(require('./routes/index'));
+//app.use(require('./routes/index'));
+router.get('/', (req, res, next) => {
+    res.render('Hola');
+});
 
 app.listen(app.get('port'), () =>{
     console.log('server on port', app.get('port'))
