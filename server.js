@@ -14,7 +14,7 @@ var port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080,
     mongoURLLabel = "";
 
 app.get('/', (req, res) => {
-  res.render('me cago en todo', { pageCountMessage : null});
+  res.render('index.html', { pageCountMessage : null});
 });
 
 app.get('/pagecount', function (req, res) {
