@@ -19,15 +19,13 @@ app.use(cors());
 app.use(express.json());
 
 //routes
-//app.use(require('./routes/index'));
-app.get('/', (req, res, next) => {
-    res.render('Hola');
+app.use(require('./routes/index'));
+//app.get('/', (req, res, next) => {
+//    res.render('Hola');
+//});
+
+app.listen(app.get('port'), () =>{
+    console.log('server on port', app.get('port'))
 });
-
-// app.listen(app.get('port'), () =>{
-//     console.log('server on port', app.get('port'))
-// });
-app.listen(port, ip);
-console.log('Server running on http://%s:%s', ip, port);
-
-module.exports = app ;
+//app.listen(port, ip);
+//console.log('Server running on http://%s:%s', ip, port);
