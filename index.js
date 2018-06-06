@@ -25,7 +25,7 @@ app.get('/', (req, res, next) => {
 });
 
 //app.listen(app.get('port'), () =>{
-    console.log('server on port', app.get('port'))
+    //console.log('server on port', app.get('port'))
 //});
 app.listen(port, ip);
 console.log('Server running on http://%s:%s', ip, port);
