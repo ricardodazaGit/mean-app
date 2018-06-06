@@ -1,31 +1,25 @@
 {
-  "name": "mean-app",
-  "version": "1.0.0",
-  "description": "MEAN Stack Application with Mongo, Express, Angular and NodeJS",
-  "main": "index.js",
-  "scripts": {
-    "start": "node src/index.js",
-    "dev": "nodemon src/index.js"
-
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ricardodazaGit/mean-app.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ricardodazaGit/mean-app/issues"
-  },
-  "homepage": "https://github.com/ricardodazaGit/mean-app#readme",
+  "name": "nodejs-ex",
+  "version": "0.0.1",
+  "description": "Node.js sample app for OpenShift 3",
+  "main": "server.js",
   "dependencies": {
-    "cors": "^2.8.4",
-    "ejs": "^2.6.1",
-    "express": "^4.16.3",
-    "mongojs": "^2.5.0"
+    "chai": "^3.5.0",
+    "chai-http": "^2.0.1",
+    "ejs": "^2.4.1",
+    "express": "^4.13.4",
+    "mocha": "^2.4.5",
+    "mongodb": "^2.1.16",
+    "morgan": "^1.7.0",
+    "object-assign":"4.1.0"
   },
-  "devDependencies": {
-    "nodemon": "^1.17.4"
+  "engine": {
+    "node": "*",
+    "npm": "*"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "test": "IP=0.0.0.0 PORT=3030 mocha --timeout 5000 tests/*_test.js"
   }
+  
 }
