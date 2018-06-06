@@ -17,7 +17,7 @@ app.use(express.json());
 
 //routes
 //app.use(require('./routes/index'));
-router.get('/', (req, res, next) => {
+app.get('/', (req, res, next) => {
     res.render('Hola');
 });
 
